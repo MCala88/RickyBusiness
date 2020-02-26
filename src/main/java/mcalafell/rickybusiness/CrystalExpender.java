@@ -1,6 +1,6 @@
 package mcalafell.rickybusiness;
 
-public class CrystalExpender {
+public class CrystalExpender implements GuestDispatcher {
 	private int stock = 0;
 	private double itemCost = 0d;
 	
@@ -14,13 +14,9 @@ public class CrystalExpender {
 	}
 
 	public void dispatch(CreditCard tarjeta) {
-		if (tarjeta.credit >= itemCost) {
+		if (tarjeta.credit >= itemCost && stock() > 0) {
 			this.stock -= 1;
-
-			if (this.stock > 0) {
-			tarjeta.credit = tarjeta.credit - itemCost;
-		
-		}
+			tarjeta.credit -= itemCost;
 		}
 	}
 	
