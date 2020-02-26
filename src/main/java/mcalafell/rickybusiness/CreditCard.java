@@ -24,6 +24,10 @@ public class CreditCard {
 	public String number() {
 		return this.number;
 	}
+	
+	public String owner() {
+		return this.owner;
+	}
 
 	public String symbol() {
 		return this.symbol;
@@ -34,7 +38,6 @@ public class CreditCard {
 				credit -= pagar;
 				return true;
 			} else {
-				System.out.println("Pago no realizado");
 				return false;
 			}
 		}

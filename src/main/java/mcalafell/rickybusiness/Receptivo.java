@@ -1,21 +1,19 @@
 package mcalafell.rickybusiness;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Receptivo implements GuestDispatcher {
-	ArrayList<GuestDispatcher> guest = new ArrayList<GuestDispatcher>();
+	List<GuestDispatcher> guest = new ArrayList<GuestDispatcher>();
 	
 
-	
-	public void registra(GuestDispatcher despachador) {
-		this.guest.add(despachador);
-		
+	public void registra(GuestDispatcher despachado) {
+		this.guest.add(despachado);
 	}
 	
-
 	public void dispatch(CreditCard alien) {
-		for (GuestDispatcher objeto: guest) {
-			objeto.dispatch(alien);
+		for (GuestDispatcher invitado: guest) {
+			invitado.dispatch(alien);
 		}
 	}
 	

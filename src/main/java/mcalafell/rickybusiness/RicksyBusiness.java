@@ -37,7 +37,6 @@ public class RicksyBusiness {
 			ufosPark.add(ovni);
         }
 
-        
         // Procesamos el pago y reserva de ovni de Abradolph
         ufosPark.dispatch(abradolph);
 
@@ -59,7 +58,6 @@ public class RicksyBusiness {
         System.out.println("Su credito no ha cambiado: " + abradolph.credit());
         System.out.println("Ovni de Abradolph: " + ufosPark.getUfoOf(abradolph.number()));
 
-        // A GearHead le vac�a la tarjeta el alien "C�mara Lenta" 
         // mientras le daba la chapa, justo antes de pagar el ovni.
         // Intenta reservarlo y el componente de reserva de ovnis
         // no le asigna ninguno.
@@ -158,12 +156,11 @@ public class RicksyBusiness {
         mostrarReserva(squanchy, packExpender, ufosPark);
 
         // Gearhead reserva ovni y pack.
-        // No tiene cr�dito.
+        // No tiene crédito.
 
         System.out.println("\nLLega GearHead!\n" + 
                              "===============");
-        gearHead.pay(3000); // no tiene cr�dito
-        System.out.println(gearHead.credit);
+        gearHead.pay(3000); // no tiene crédito
         receptivo.dispatch(gearHead);
         mostrarReserva(gearHead, packExpender, ufosPark);
 
@@ -188,17 +185,17 @@ public class RicksyBusiness {
          * A por el 10!! 
          * Wubba lubba dub dub!!
          * 
-         * A�ade otra tarea al receptivo,
+         * Añade otra tarea al receptivo,
          * de modo que 5 invitados:
          * abradolph, squanchy, morty, gearHead, birdpearson
-         * encarguen un RickMen� junto 
+         * encarguen un RickMenú junto 
          * al ovni y al pack de bienvenida.
-         * Hay 100 RickMen�s y su precio es de 10 EZIs.
+         * Hay 100 RickMenús y su precio es de 10 EZIs.
          * Muestra el total de pedidos y la lista de
          * invitados/as que han hecho un pedido.
          */
 
-         // tu c�digo aqu�
+         // tu código aquí
     }
 
     private static void mostrarReserva(CreditCard card, CrystalExpender expender, UfosPark ufos) {
@@ -206,13 +203,4 @@ public class RicksyBusiness {
         System.out.println("Packs: " + expender.stock());
         System.out.println("Ovni: " + ufos.getUfoOf(card.number()));
     }
-
-
-	
-
-
-
-
-	}
-
-
+}
