@@ -1,22 +1,22 @@
 package mcalafell.rickybusiness;
 
+import java.util.ArrayList;
+
 public class Receptivo implements GuestDispatcher {
-
-	public void registra(CrystalExpender packExpender) {
-			crystalexpends.add(packExpender);
-		
-	}
+	ArrayList<GuestDispatcher> guest = new ArrayList<GuestDispatcher>();
 	
-	public void registra(UfosPark ufosPark) {
-
+	public Receptivo() {};
+	
+	public void registra(GuestDispatcher despachador) {
+		this.guest.add(despachador);
 		
 	}
 	
 
-	public void dispatch(CreditCard tarjeta) {
-		// TODO Auto-generated method stub
-		
+	public void dispatch(CreditCard alien) {
+		for (GuestDispatcher objeto: guest) {
+			objeto.dispatch(alien);
+		}
 	}
- 
 	
 }
