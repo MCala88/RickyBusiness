@@ -70,8 +70,7 @@ public class RicksyBusiness {
 
         gearHead.pay(3000); // le vac�an la cartera
 
-        
-         /* ufosPark.dispatch(gearHead);*/
+        ufosPark.dispatch(gearHead);
         System.out.println("Su credito es cero: " + gearHead.credit());
         System.out.println("No puede reservar ovni: " + ufosPark.getUfoOf(gearHead.number()));
         
@@ -164,6 +163,7 @@ public class RicksyBusiness {
         System.out.println("\nLLega GearHead!\n" + 
                              "===============");
         gearHead.pay(3000); // no tiene cr�dito
+        System.out.println(gearHead.credit);
         receptivo.dispatch(gearHead);
         mostrarReserva(gearHead, packExpender, ufosPark);
 

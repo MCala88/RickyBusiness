@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class UfosPark {
 	private double fee = 500;
-	static ArrayList <String> flota = new ArrayList <String>();
+	static ArrayList<String> flota = new ArrayList <String>();
 	
 	public UfosPark() {
 	}
@@ -27,11 +27,15 @@ public class UfosPark {
 
 	public String getUfoOf(String number) {
 		
+		for (String ovni: flota) {
+			if (ovni != null) {
+				
+			}
+		}
 		return null;
 	}
 	
-	/*public String toString() 
-    { 
-        return "El ovni " + ; 
-    }*/
+	public String toString()  { 
+        return "Ovnis: " + flota ; 
+    }
 }

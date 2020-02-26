@@ -8,19 +8,24 @@ public class CrystalExpender {
 		this.stock = stock;
 		this.itemCost = itemCost;
 	}
-	
-	public void setStock(int almacenado) {
-		this.stock = almacenado;
-	}
 
 	public int stock() {
 		return this.stock;
 	}
 
-	public void dispatch(CreditCard abradolph) {
-		// TODO Auto-generated method stub
+	public void dispatch(CreditCard tarjeta) {
+		if (tarjeta.credit >= itemCost) {
+			this.stock -= 1;
+
+			if (this.stock > 0) {
+			tarjeta.credit = tarjeta.credit - itemCost;
 		
+		}
+		}
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "Stock: " + stock + "\n" + "cost: " + itemCost;
+	}
 }

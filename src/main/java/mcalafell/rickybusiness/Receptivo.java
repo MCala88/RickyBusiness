@@ -1,18 +1,19 @@
 package mcalafell.rickybusiness;
 
-public class Receptivo {
+public class Receptivo implements GuestDispatcher {
 
 	public void registra(CrystalExpender packExpender) {
-		// TODO Auto-generated method stub
-		
-	}	
-	
-	public void registra(UfosPark ufosPark) {
-		// TODO Auto-generated method stub
+			crystalexpends.add(packExpender);
 		
 	}
+	
+	public void registra(UfosPark ufosPark) {
 
-	public void dispatch(CreditCard squanchy) {
+		
+	}
+	
+
+	public void dispatch(CreditCard tarjeta) {
 		// TODO Auto-generated method stub
 		
 	}
